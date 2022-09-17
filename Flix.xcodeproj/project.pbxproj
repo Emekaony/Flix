@@ -16,6 +16,8 @@
 		4E09886428D5207A004F4BFB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4E09886228D52079004F4BFB /* LICENSE */; };
 		4E09886528D5207A004F4BFB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E09886328D52079004F4BFB /* README.md */; };
 		4E09886A28D570CD004F4BFB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09886928D570CD004F4BFB /* APIManager.swift */; };
+		4EE4873928D5899900CAFDFA /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4873828D5899900CAFDFA /* MovieCell.swift */; };
+		4EE4873C28D58FC500CAFDFA /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE4873B28D58FC500CAFDFA /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		4E09886228D52079004F4BFB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4E09886328D52079004F4BFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E09886928D570CD004F4BFB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		4EE4873828D5899900CAFDFA /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE4873C28D58FC500CAFDFA /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 		4E09886728D5707E004F4BFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4873828D5899900CAFDFA /* MovieCell.swift */,
 				4E09885428D51E3E004F4BFB /* Main.storyboard */,
 				4E09885928D51E40004F4BFB /* LaunchScreen.storyboard */,
 			);
@@ -116,6 +121,9 @@
 			dependencies = (
 			);
 			name = Flix;
+			packageProductDependencies = (
+				4EE4873B28D58FC500CAFDFA /* AlamofireImage */,
+			);
 			productName = Flix;
 			productReference = 4E09884B28D51E3E004F4BFB /* Flix.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 4E09884228D51E3E004F4BFB;
+			packageReferences = (
+				4EE4873A28D58FC500CAFDFA /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 4E09884C28D51E3E004F4BFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,6 +187,7 @@
 				4E09886A28D570CD004F4BFB /* APIManager.swift in Sources */,
 				4E09885328D51E3E004F4BFB /* MoviesViewController.swift in Sources */,
 				4E09884F28D51E3E004F4BFB /* AppDelegate.swift in Sources */,
+				4EE4873928D5899900CAFDFA /* MovieCell.swift in Sources */,
 				4E09885128D51E3E004F4BFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4EE4873A28D58FC500CAFDFA /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4EE4873B28D58FC500CAFDFA /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EE4873A28D58FC500CAFDFA /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E09884328D51E3E004F4BFB /* Project object */;
 }
