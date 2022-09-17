@@ -26,4 +26,4 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="https://github.com/Emekaony/Flix/blob/main/flix.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+    1. Updated to xcode 14, and pods weren't working. I used Swift Package Manager instead
