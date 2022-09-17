@@ -18,6 +18,7 @@
 		4E09886A28D570CD004F4BFB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09886928D570CD004F4BFB /* APIManager.swift */; };
 		4EE4873928D5899900CAFDFA /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4873828D5899900CAFDFA /* MovieCell.swift */; };
 		4EE4873C28D58FC500CAFDFA /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE4873B28D58FC500CAFDFA /* AlamofireImage */; };
+		4EE4873E28D5970500CAFDFA /* flix.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4EE4873D28D5970500CAFDFA /* flix.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4E09886328D52079004F4BFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E09886928D570CD004F4BFB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4EE4873828D5899900CAFDFA /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		4EE4873D28D5970500CAFDFA /* flix.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = flix.gif; path = ../../../../Desktop/flix.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		4E09884228D51E3E004F4BFB = {
 			isa = PBXGroup;
 			children = (
+				4EE4873D28D5970500CAFDFA /* flix.gif */,
 				4E09886228D52079004F4BFB /* LICENSE */,
 				4E09886328D52079004F4BFB /* README.md */,
 				4E09884D28D51E3E004F4BFB /* Flix */,
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E09885B28D51E40004F4BFB /* LaunchScreen.storyboard in Resources */,
+				4EE4873E28D5970500CAFDFA /* flix.gif in Resources */,
 				4E09885828D51E40004F4BFB /* Assets.xcassets in Resources */,
 				4E09886528D5207A004F4BFB /* README.md in Resources */,
 				4E09886428D5207A004F4BFB /* LICENSE in Resources */,

@@ -65,12 +65,14 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let posterUrl = URL(string: baseUrl+posterPath)
         
         cell.posterReview.af.setImage(withURL: posterUrl!)
+        cell.posterReview.contentMode = .scaleAspectFill
         
         
         
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis
         cell.synopsisLabel.numberOfLines = 0
+        cell.posterReview.clipsToBounds = true
         
         return cell
     }
