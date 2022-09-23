@@ -79,7 +79,6 @@
 				4E09886628D57078004F4BFB /* Model */,
 				4E09885728D51E40004F4BFB /* Assets.xcassets */,
 				4E09885C28D51E40004F4BFB /* Info.plist */,
-				4E20F3F928DE63EB00C1FA94 /* MovieGridViewController.swift */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -105,6 +104,7 @@
 		4E09886828D57087004F4BFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4E20F3F928DE63EB00C1FA94 /* MovieGridViewController.swift */,
 				4E20F3F728DE213B00C1FA94 /* MovieDetailsViewController.swift */,
 				4E09885228D51E3E004F4BFB /* MoviesViewController.swift */,
 			);
