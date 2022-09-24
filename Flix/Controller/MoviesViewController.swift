@@ -59,7 +59,6 @@ class MoviesViewController: UIViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 
 }
 

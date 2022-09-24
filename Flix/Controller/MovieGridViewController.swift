@@ -32,7 +32,7 @@ class MovieGridViewController: UIViewController {
         layout.minimumInteritemSpacing = 10
         
         // here is how you access the width of the phone
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing) / 2
         layout.itemSize = CGSize(width: width, height: width * (3/2))
         
         let url = URL(string: apikey)!
@@ -56,6 +56,21 @@ class MovieGridViewController: UIViewController {
         }
         task.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // collection views have items and not indexes so this is tricky
+        if segue.identifier == "gridToDetail" {
+            let cell = sender as! UICollectionViewCell
+            let indexPath = collectionView.indexPath(for: cell)!
+            
+            print(indexPath.item)
+            
+            let movie = movies[indexPath.item]
+            
+            let destinationVC = segue.destination as! MovieDetailsViewController
+            destinationVC.movie = movie
+        }
+    }
 
 }
 
@@ -70,6 +85,7 @@ extension MovieGridViewController: UICollectionViewDataSource, UICollectionViewD
         
         // collectionView's have items and not rows
         let movie = movies[indexPath.item]
+        // print(indexPath.item)
         
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterViewPath = movie["poster_path"] as! String
@@ -80,5 +96,7 @@ extension MovieGridViewController: UICollectionViewDataSource, UICollectionViewD
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+    }
 }
