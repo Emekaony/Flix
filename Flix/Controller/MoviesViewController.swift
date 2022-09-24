@@ -8,7 +8,7 @@
 import UIKit
 import AlamofireImage
 
-class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MoviesViewController: UIViewController {
     
     var movies = [[String: Any]]()
     var ApiManager = APIManager()
@@ -47,6 +47,25 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // write code to prepare for the next screen
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let movie = movies[indexPath.row]
+        
+        let detailVC = segue.destination as! MovieDetailsViewController
+        detailVC.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+
+}
+
+//MARK: - Tableview customisation
+
+extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
@@ -76,18 +95,5 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // write code to prepare for the next screen
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        
-        let movie = movies[indexPath.row]
-        
-        let detailVC = segue.destination as! MovieDetailsViewController
-        detailVC.movie = movie
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-
 }
 
