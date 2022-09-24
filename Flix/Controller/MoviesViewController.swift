@@ -53,6 +53,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // when using storyboards, you give your cells identifiers so you can do things like this below
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
 
         
@@ -66,8 +67,6 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.posterReview.af.setImage(withURL: posterUrl!)
         cell.posterReview.contentMode = .scaleAspectFill
-        
-        
         
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis

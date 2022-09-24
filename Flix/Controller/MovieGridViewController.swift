@@ -14,6 +14,8 @@ class MovieGridViewController: UIViewController {
      A call to an API performed in the viewDidLoad() mehtod!
      */
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     var movies = [[String: Any]]()
     var apikey = "https://api.themoviedb.org/3/movie/634649/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
